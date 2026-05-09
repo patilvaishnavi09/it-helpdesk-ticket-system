@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Help Desk System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>IT Help Desk Ticket System</h1>
+            <p>Manage support tickets efficiently and track issue resolution.</p>
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <h2 id="totalTickets">0</h2>
+                <p>Total Tickets</p>
+            </div>
+
+            <div class="card open-card">
+                <h2 id="openTickets">0</h2>
+                <p>Open Tickets</p>
+            </div>
+              <div class="card resolved-card">
+                <h2 id="resolvedTickets">0</h2>
+                <p>Resolved Tickets</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Create New Ticket</h2>
+
+            <form id="ticketForm">
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Issue Title"
+                    required
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Describe your issue"
+                    required
+                ></textarea>
+                <select id="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit">Create Ticket</button>
+            </form>
+        </div>
+
+        <div class="ticket-section">
+            <div class="ticket-header">
+                <h2>All Tickets</h2>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tickets..."
+                >
+            </div>
+
+            <div id="ticketList"></div>
+        </div>
+
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>
